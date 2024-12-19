@@ -83,33 +83,11 @@ The goal of this project is to predict house prices based on given features usin
 ## **Results**
 
 - **Performance Metrics**:
-   - Mean Squared Error (MSE): `XX,XXX`
-   - R² Score: `0.85` (example value)
+   - Mean Squared Error (MSE): `398`
+   - R² Score: `0.96` 
 
 **Key Findings**:
-- The model performs well with an R² score of **85%**, indicating it can explain most of the variance in house prices.
-- Features like `SquareFootage`, `Bedrooms`, and `Location` are significant predictors of price.
+- The model performs well with an R² score of **96%**, indicating it can explain most of the variance in house prices.
+- Features like `price_per_sqft`, `total_sqft_int`, and `bhk` are significant predictors of price.
 
 ---
-
-## **Visualization**
-
-**1. Decision Tree Structure**  
-![Decision Tree](house-pricetree.png)
-
-**2. Feature Importance**  
-Visualize the most important features for predicting house prices.
-
-```python
-# Plot Feature Importance
-import matplotlib.pyplot as plt
-
-importances = model.feature_importances_
-features = X.columns
-
-plt.figure(figsize=(8, 6))
-plt.barh(features, importances, color='skyblue')
-plt.title("Feature Importance")
-plt.xlabel("Importance")
-plt.ylabel("Features")
-plt.show()
